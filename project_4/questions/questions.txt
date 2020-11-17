@@ -1,0 +1,268 @@
+Q: #Dopln pi na 2 desatnine miesta.# A: #3.14#
+Q: #Dopln chybajuce cislo v rade 1, 2, 3, ?, 8, 12.# A: #5#
+Q: #Aku vlnovu dlzku ma modra farba?
+
+A)380nm-430nm
+B)430nm-520nm
+C)320nm-420nm
+D)1m-1km
+E)380nm-530nm
+# A: #A#
+Q: #Aku hodnotu ma Avogadrova konstanta?
+
+A) 1,602*10E19 C
+B) 6,023*10E25 mol^-1
+C) 6,626*10E-34 Js
+D) 2,998*10E8 ms^-1
+# A: #B#
+Q: #Aku hodnotu ma naboj elektronu?
+
+A) 1,602*10E-19 C
+B) 6,023*10E25 mol^-1
+C) 6,626*10E-34 Js
+D) 2,998*10E8 ms^-1
+# A: #A#
+Q: #Ake napatie sa nachadza na rezistore?
+R=100 Ohm
+I=10 mA
+
+A) 1000V
+B) Napatie na rezistore nie je.
+C) 1V
+D) 0,1V
+# A: #C#
+Q: #char s = 'd', t = 'x';
+int c = 7;
+
+c = c + ( s >= t );
+Aku hodnotu bude mat c na konci programu?
+
+A) Program sa neda skompilovat.
+B) 6
+C) 8
+D) 7
+# A: #D#
+Q: #
+void foo( int x ) { printf( "%d", x++; ); }
+
+...
+
+int x = 5;
+printf( "%d", x );
+foo( x++ );
+printf( "%d", x);
+
+...
+
+Co vypise nasledujuci program?
+
+A) 556
+B) 565
+C) 566
+D) 567
+# A: #A#
+Q: #Co zobrazi nasledujuce volanie funkcie printf?
+
+	int a = 27;
+	printf( "%f", a );
+
+A) 27.0
+B) 27, ale pocet nul zavisy na implementacii
+	kniznice
+C) 27
+D) ziadna z moznosti
+E) 27.000000
+F) program nepojde skompilovat 
+# A: #D#
+Q: #Aka hodnota bude ulozena v premennej x?
+VSTUP: -11215.500vutbrno 
+
+	float x = 2873.183;
+	scanf( "%f", &x );
+
+A) 0
+B) Nedefinovane, program moze spadnut.
+C) 2873.183
+D) -11215.500
+E) +11215.500
+# A: #D#
+Q: #Aka bude hodnota v premennej x?
+VSTUP: -327.273
+
+	double x = -3833.61;
+	scanf( "%f", &x );
+
+A) -327.273
+B) Nedefinovana, program moze spadnut.
+C) 0
+D) -3833.617
+E) +327.273
+# A: #D#
+Q: #Co zobrazi nasledujuce volanie funcie printf?
+
+	double a = 72.0;
+	printf( "%d", a );
+
+A) 72, ale pocet nul zavi na implementacii  
+B) 72
+C) 72.0000
+D) ziadna z variant
+E) program nepojde skompilovat
+	( ani s potlacenim varovych vypisov )
+# A: #D#
+Q: #Aka hodnota bude  premennej x?
+VSTUP: 6.59404e5
+	int x = -6075;
+	scanf( "%d", &x );
+
+A) 6
+B) -6075
+C) 659404
+D) 6.59404
+E) Nedefinovana, program moze spadnut.
+# A: #A#
+Q: #Co zobrazi nasledujici program?
+
+	int x = -209;
+	if( x % 2 == 1 )
+		printf( "neparne" );
+	else
+		printf( "parne" );
+
+A) neparne
+B) parne
+C) Program spadne.
+D) Program nepojde skompilovat.
+E) Nic.
+# A: #B#
+Q: #Aka hodnota bude v premennej x?
+
+	int x;
+	x = 41.0e0 / 82.0;
+
+A) 0 
+B) Nedefinovana, program moze spadnut.
+C) Program nepojde skompilovat.
+D) 6908.684
+E) -6908.684
+# A: #A#
+Q: #Aku hodnotu bude mat premenna x?
+	int x;
+	x = 16.0E-0 / 32.0;
+
+A) 0 
+B) Nedefinovana, program moze spadnut.
+C) Program nepojde skompilovat.
+D) 6908.684
+E) -6908.684 
+# A: #A#
+Q: #Preved dvojkove cislo 10100101 o desiatkovej sustavy.
+
+A) 165
+B) 162
+C) 112
+D) 305
+E)  Nie je mozne.
+# A: #A#
+Q: #Aka hodnota bude v premennej x?
+VSTUP: 8.32821E5
+
+	double x = 14886;
+	scanf( "lf", &x );
+
+A) 8
+B) Nedefinovana, program moze spadnut.
+C) 14886
+D) 832821
+E) 8.32821
+# A: #D#
+Q: #Aku hodnotu musi mat premenna x, 
+ aby bola podmienka splnena.
+	
+	int x = ...;
+	if( x == 28 & 10 )
+	{
+		...
+	}
+ 
+ 
+A) Podmienku nie je mozne splnit.
+B) 1
+C) 8
+D) 28
+E) Plati pre lubovolne x.
+# A: #A#
+Q: #Aku hodnotu musi mat premenna x,
+ aby bola podmienka splnena?
+
+	int x = ...;
+	
+	if( x == ( 23 || 15 ) )
+	{
+		...
+	}
+
+A) Podmienku nie je mozne splnit.
+B) 23 alebo 15
+C) 1
+D) 31
+E)  Plati pre lubovolne x.
+# A: #D#
+Q: #Aku hodnotu musi mat premenna x,
+ aby bola podmienka splnena?
+
+	int x = ...;
+	if( x == 18 & 16 )
+	{
+		...
+	}
+
+A) Podmienku nie je mozne splnit.
+B) 1
+C) 18
+D) 16
+E) Podmienka plati pre lubovolne x.
+# A: #C#
+Q: #Co zobrazi nasledujuci program?
+
+	int a = 2, b = 6;
+	
+	if( a =! b )
+		printf( "%d". a + 15 );
+	else
+		printf( "%d", a + 27);
+
+A) 2
+B) 17
+C) 28
+D) 15
+E) 27
+# A: #E#
+Q: #Co zobrazi nasledujuci program?
+
+	int x = 121;
+	
+	if( 89 > x < 76 )
+		printf( "1" );
+	else
+		printf( "2" );
+
+A) 1
+B) Program nepojde skompilovat.
+C) Program spadne.
+D) Zapis nie je syntakticky spravny.
+E) 2
+# A: #A#
+Q: #Aka bude hodnota v premennej y?
+
+	int x;
+	double y;
+	
+	y = x = 13.8125 + 0.0;
+
+A) 13.00000
+B) Program nepojde skompilovat.
+C) Program spadne;
+D) Program nie je syntakticky spravne.
+E) 0
+# A: #A#

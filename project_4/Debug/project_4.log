@@ -1,0 +1,5 @@
+﻿  project_4.cpp
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(51,10): warning C4101: result: неиспользованная локальная переменная
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(41,36): warning C4101: result_file_location: неиспользованная локальная переменная
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(68): warning C6031: Возвращаемое значение пропущено: "scanf".
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(70): warning C6054: Возможно, строка "answer" не завершается нулем.
