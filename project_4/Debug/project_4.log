@@ -1,5 +1,10 @@
 ﻿  project_4.cpp
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(51,10): warning C4101: result: неиспользованная локальная переменная
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(41,36): warning C4101: result_file_location: неиспользованная локальная переменная
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(68): warning C6031: Возвращаемое значение пропущено: "scanf".
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(70): warning C6054: Возможно, строка "answer" не завершается нулем.
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(132,29): warning C4473: "fprintf": передано недостаточно аргументов для строки формата
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(132,29): message : заполнители и их параметры ожидают переменное число аргументов в количестве 7, но было предоставлено 5
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(132,29): message : отсутствующий вариативный аргумент "6" требуется для строки форматирования "%d"
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(139,29): warning C4473: "fprintf": передано недостаточно аргументов для строки формата
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(139,29): message : заполнители и их параметры ожидают переменное число аргументов в количестве 7, но было предоставлено 5
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(139,29): message : отсутствующий вариативный аргумент "6" требуется для строки форматирования "%d"
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(29,14): warning C4101: result: неиспользованная локальная переменная
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\project_4.cpp(79,46): warning C4101: result_file_location: неиспользованная локальная переменная
+  project_4.vcxproj -> E:\BPC_IBE_1\PC1T\project_4\project_4\Debug\project_4.exe
