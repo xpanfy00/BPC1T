@@ -1,0 +1,13 @@
+﻿  functions.cpp
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(24,7): warning C4101: 'vyber': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(358,6): warning C4101: 'value': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(357,6): warning C4101: 'counter': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(356,7): warning C4101: 'chek_login1': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(407,6): warning C4101: 'counter': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(408,6): warning C4101: 'count_file_scan': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(631,7): warning C4101: 'bod': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(630,7): warning C4101: 'buf': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(656,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(657,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(658,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(659,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)

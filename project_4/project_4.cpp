@@ -9,11 +9,14 @@
 #include <time.h>
 
 
+
+
 int main()
 {
-
 	navigace();
 
 	return 0;
 }
+
+
 

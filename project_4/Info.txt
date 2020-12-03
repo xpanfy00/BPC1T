@@ -1,8 +1,0 @@
-Testa - 1
-Jmeno - YAroslav
-Prijmeni - Panfyorov
-Obor - IT
-Pohlavi - M
-Vek - 24
-Z: #24# P: #58#
-

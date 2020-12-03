@@ -1,0 +1,71 @@
+Q: #Dopln pi na 2 desatnine miesta.# A: #3.14#
+Q: #Dopln chybajuce cislo v rade 1, 2, 3, ?, 8, 12.# A: #5#
+Q: #Aku hodnotu musi mat premenna x,
+ aby bola podmienka splnena?
+
+	int x = ...;
+	
+	if( x ==  31  )
+	{
+		...
+	}
+
+# A: #31#
+Q: #Aku hodnotu musi mat premenna x,
+ aby bola podmienka splnena?
+
+	int x = ...;
+	if( x == 18 )
+	{
+		...
+	}
+
+# A: #18#
+Q: #Co zobrazi nasledujuci program?
+
+	int a = 2, b = 6;
+	
+	if( a != b )
+		printf( "%d", a + 15 );
+	else
+		printf( "%d", a + 27);
+
+# A: #17#
+Q: #Co zobrazi nasledujuci program?
+
+	int x = 121;
+	
+	if( 89 > x < 76 )
+		printf( "1" );
+	else
+		printf( "2" );
+
+# A: #1#
+Q: #Aka bude hodnota v premennej y?
+
+	int x;
+	int y;
+	
+	y = x = 13.8125 + 0.0;
+
+# A: #13#
+Q: #Aka hodnota bude ulozena v premennej x?
+VSTUP: 11215.500vutbrno 
+
+	float x = 2873.183;
+	scanf( "%f", &x );
+
+# A: #2873.183#
+Q: #Aka bude hodnota v premennej x?
+VSTUP: 327.273
+
+	double x = 3833.617;
+	scanf( "%f", &x );
+
+# A: #3833.617#
+Q: #Co zobrazi nasledujuce volanie funcie printf?
+
+	double a = 72.0;
+	printf( "%f", a );
+
+# A: #72.0000#
