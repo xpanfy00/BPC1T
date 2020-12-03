@@ -1,13 +1,19 @@
 ﻿  functions.cpp
 E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(24,7): warning C4101: 'vyber': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(358,6): warning C4101: 'value': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(357,6): warning C4101: 'counter': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(356,7): warning C4101: 'chek_login1': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(407,6): warning C4101: 'counter': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(408,6): warning C4101: 'count_file_scan': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(631,7): warning C4101: 'bod': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(630,7): warning C4101: 'buf': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(656,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(657,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(658,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(659,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(312,6): warning C4101: 'value': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(311,6): warning C4101: 'counter': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(310,7): warning C4101: 'chek_login1': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(361,6): warning C4101: 'counter': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(362,6): warning C4101: 'count_file_scan': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(582,7): warning C4101: 'bod': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(581,7): warning C4101: 'buf': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(612,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(626,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(627,9): warning C4566: character represented by universal-character-name '\u011B' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(627,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(629,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(630,9): warning C4473: 'printf' : not enough arguments passed for format string
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(630,9): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(630,9): message : the missing variadic argument 2 is required by format string '%10c'
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(603,9): warning C4101: 'k': unreferenced local variable
+  project_4.vcxproj -> E:\BPC_IBE_1\PC1T\project_4\project_4\x64\Debug\project_4.exe

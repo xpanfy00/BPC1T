@@ -200,52 +200,6 @@ void navigace() {
 		}
 
 	case 5:
-		/*pozice_case_5 = navigace_statistika();
-		if (pozice_case_5 == 1)
-		{
-			show_all_users();
-			_getch();
-			navigace_statistika();
-		}
-		else if (pozice_case_5 == 2)
-		{
-			printf("vyberte pohlavi (M/Z)\n");
-			scanf("%s", word);
-			if (strcmp(word, "M"))
-			{
-				if (strcmp(word, "Z"))
-				{
-					printf("zkuste znovu");
-				}
-				else
-				{
-					show_all_users_podle_pohlavi(word);
-				}
-			}
-			else
-			{
-				show_all_users_podle_pohlavi(word);
-			}
-			_getch();
-			navigace();
-		}
-		else if(pozice_case_5 == 3)
-		{
-			printf("vyberte obor (napr. IBE ,AMT, EKT, MET a t.d.)\n");
-			scanf("%s", word);
-			show_all_users_podle_oboru(word);
-		}
-		else if (pozice_case_5 == 4)
-		{
-			printf("Napiste vas VutID\n");
-			scanf("%s", word);
-			show_osobni(word);
-		}
-		else
-		{
-			navigace();
-		}*/
-
 		navigace_statistika();
 		break;
 	case 6:
@@ -472,16 +426,15 @@ void show_all_users() {
 		}
 		//vrati strukturu hrad
 	}
-	printf("  Uzivatelia: \n");
-	printf(" #  |   Jmeno    |   Test-1    |   Test-2    |   Test-3    |             |\n"
-		   "    |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
-	       "----+------------+-------------+-------------+-------------+-------------|\n");
+	printf("  #  |   Jmeno    |  Prijmeni  |   obor     |  pohlavi   |   Vek      |   Test-1    |   Test-2    |   Test-3    |             |\n"
+		   "     |            |            |            |            |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
+		   "-----+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------|\n");
 	for (int i = 0; i < pocet_uzivatelov; i++) {  //vypise nazvy vsetkych nacitanych uzivatelov
 		a = atoi(studenti[i].test1);
 		b = atoi(studenti[i].test2);
 		c = atoi(studenti[i].test3);
 		middle = ((a+b+c)/3);
-		printf("%3d | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, studenti[i].name, studenti[i].test1, studenti[i].test2, studenti[i].test3, middle);
+		printf(" % 3d | % 10s | % 10s | % 10s | % 10s | % 10s | % 10s %%| % 10s %%| % 10s %%| % 10d %%| \n", i, studenti[i].name, studenti[i].surname, studenti[i].faculty,studenti[i].sex, studenti[i].age, studenti[i].test1, studenti[i].test2, studenti[i].test3, middle);
 	}
 	fclose(seznam);
 	
@@ -518,16 +471,15 @@ void show_all_users_podle_pohlavi(const char* word) {
 		}
 		//vrati strukturu hrad
 	}
-	printf("  Uzivatelia: \n");
-	printf(" #  |   Jmeno    |   Test-1    |   Test-2    |   Test-3    |             |\n"
-		"    |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
-		"----+------------+-------------+-------------+-------------+-------------|\n");
+	printf(" #  |   Jmeno    |  Prijmeni  |   pohlavi  |   Test-1    |   Test-2    |   Test-3    |             |\n"
+	   	   "    |            |            |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
+		   "----+------------+------------+------------+-------------+-------------+-------------+-------------|\n");
 	for (int i = 0; i < pocet_uzivatelov; i++) {  //vypise nazvy vsetkych nacitanych uzivatelov
 		a = atoi(studenti[i].test1);
 		b = atoi(studenti[i].test2);
 		c = atoi(studenti[i].test3);
 		middle = ((a + b + c) / 3);
-		printf("%3d | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, studenti[i].name, studenti[i].test1, studenti[i].test2, studenti[i].test3, middle);
+		printf("%3d | %10s | %10s | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, studenti[i].name, studenti[i].surname, studenti[i].sex, studenti[i].test1, studenti[i].test2, studenti[i].test3, middle);
 	}
 	fclose(seznam);
 
@@ -564,16 +516,15 @@ void show_all_users_podle_oboru(const char* word) {
 		}
 		//vrati strukturu hrad
 	}
-	printf("  Uzivatelia: \n");
-	printf(" #  |   Jmeno    |   Test-1    |   Test-2    |   Test-3    |             |\n"
-		"    |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
-		"----+------------+-------------+-------------+-------------+-------------|\n");
+	printf(" #  |   Jmeno    |  Prijmeni  |   Obor     |   Test-1    |   Test-2    |   Test-3    |             |\n"
+		   "    |            |            |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
+		   "----+------------+------------+------------+-------------+-------------+-------------+-------------|\n");
 	for (int i = 0; i < pocet_uzivatelov; i++) {  //vypise nazvy vsetkych nacitanych uzivatelov
 		a = atoi(studenti[i].test1);
 		b = atoi(studenti[i].test2);
 		c = atoi(studenti[i].test3);
 		middle = ((a + b + c) / 3);
-		printf("%3d | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, studenti[i].name, studenti[i].test1, studenti[i].test2, studenti[i].test3, middle);
+		printf("%3d | %10s | %10s | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, studenti[i].name, studenti[i].surname, studenti[i].sex, studenti[i].test1, studenti[i].test2, studenti[i].test3, middle);
 	}
 	fclose(seznam);
 
@@ -605,14 +556,14 @@ void show_osobni(const char* word)
 		}
 		if (strcmp(student.name, "CHYBA")) {  //ak nenastal error ulozi ho do pola uzivatelov
 			printf("  Uzivatel: \n");
-			printf(" #  |   Jmeno    |   Test-1    |   Test-2    |   Test-3    |             |\n"
-				"    |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
-				"----+------------+-------------+-------------+-------------+-------------|\n");
+			printf(" #  |   Jmeno    |  Prijmeni  |   Obor     |   Test-1    |   Test-2    |   Test-3    |             |\n"
+				   "    |            |            |            |   vysledek  |   vysledek  |   vysledek  |   prumer    |\n"
+				   "----+------------+------------+------------+-------------+-------------+-------------+-------------|\n");
 			a = atoi(student.test1);
 			b = atoi(student.test2);
 			c = atoi(student.test3);
 			middle = ((a + b + c) / 3);
-			printf("%3d | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, student.name, student.test1, student.test2, student.test3, middle);
+			printf("%3d | %10s | %10s | %10s | %10s%% | %10s%% | %10s%% | %10d%% |\n", i, student.name,student.surname, student.faculty, student.test1, student.test2, student.test3, middle);
 			i++;
 		}
 		//vrati strukturu hrad
@@ -649,24 +600,46 @@ int file_scan(const char* word)
 
 void o_programm()
 {
-	
-	printf("vypracovany program na tema projektu c. 4\n");
-	printf("program je vyvinut v jazyce C.\n");
-	printf("Na vyvoji se podileli Denis Jalovecky(203569) a Yaroslav Panfyorov(212273)\n");
-	printf("Toto je maly studentsky testovací program\n");
-	printf("Chcete-li projít 1 z testu, musite vyplnit sve osobni udaje\n");
-	printf("Statistika provadení testu se zobrazi v procentech\n");
-	printf("Chcete-li zobrazit prumerne procento uspeanych odpovedí, prejdete do casti\n");
-	printf("Statistika -> osobni statistika\n");
-	printf("Chcete-li zobrazit statistiku vsech uzivatelu, prejdete do casti\n");
-	printf("Statistika -> statistika vsech uzivatelu\n");
-	printf("take statistika podle oboru\n");
-	printf("Statistika -> statistika podle oboru\n");
-	printf("statistika podle pohlavi\n");
-	printf("Statistika -> statistika podle pohlavi\n");
-	printf("pokud ziskate prumerne procento ze vsech 3 testu\n");
-	printf("60%% a vyse, ziskate pristup k tajne hre\n\n\n");
-	printf("pro navrat do menu stisknete libovolnou klavesu\n");
+	int j, k;
+	HANDLE  hConsole;
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	for (j = 0; j < 10; j++)
+		printf("\n");
+	printf("%50c ", ' ');
+
+	SetConsoleTextAttribute(hConsole, 240);
+	printf("Program pro interaktivní testy ");
+	SetConsoleTextAttribute(hConsole, 15);
+	printf("\n%56c ", ' ');
+	SetConsoleTextAttribute(hConsole, 15);
+	printf("\n%23c ", ' ');
+	SetConsoleTextAttribute(hConsole, 240);
+	printf("Cilem tohoto projektu je vytvorit program pro vyplnovani a vyhodnocovani interaktivnich testu.\n");
+	SetConsoleTextAttribute(hConsole, 15);
+	printf("%23c ", ' ');
+	SetConsoleTextAttribute(hConsole, 240);
+	printf("Jedna se o testy ze studentem zvoleneho oboru podane interaktivni(a zabavnou) formou.\n");
+	SetConsoleTextAttribute(hConsole, 12);
+	printf("\nZakladne parametre programu:");
+	SetConsoleTextAttribute(hConsole, 15);
+	printf("\n%10c. Po spusteni programu bude uzivatel vyzvan k vyplneni jmena a zakladnich udaju (vek, pohlaví apod.),\n%10c dale bude mozno zvolit test z nekolika oboru. ", '1', ' ');
+	printf("\n%10c. Kazdy test bude obsahovat jiny zpusob interakce s clověkem (napr. zvoleni z mozností a,b,c,d ci odpoved textem)"".", '2');
+	printf("\n%10c. Vsechny testy se budou nacitat ze souboru a stejne tak jejich vysledky budou archivovany pro moznostnasledneho\n%10c vyhodnoceni. ", '3', ' ');
+	printf("\n%10c. Po ukonceni testu budou zobrazeny statistiky daneho testu - napríklad pocet spravne zodpovezenych otazek,\n%10c doba trvaní apod.  ", '4', ' ');
+	printf("\n%10c. Po kazdem vyplneni testu budou ulozena statisticka data, ktera se budou prumerovat ze vsech testu zestejne\n%10c skupiny(delenych dle zakladnich udaju apod).\n\n", '5');
+
+	SetConsoleTextAttribute(hConsole, 240);
+	printf("Bonusovy ukol:");
+	SetConsoleTextAttribute(hConsole, 15);
+	printf("\nImplementujte do testu jeden z nasledujicich zpusobu interakce: “hra riskuj”, odkryvani “tajne” informace spravnymi odpovedmi. \n\n\n\t");
+
+	SetConsoleTextAttribute(hConsole, 155);
+	printf("Autori:");
+	SetConsoleTextAttribute(hConsole, 15);
+	printf(" Denis Jalovecky    - BPC-IBE - BPC_PC1T - 2020/2021 - xjalov05@vutbr.cz\n \
+	        Yaroslav Panfyorov - BPC-IBE - BPC_PC1T - 2020/2021 - xpanfy00@vutbr.cz\n\n\n%60c(ESC)\n", ' ');
+
 	_getch();
 	navigace();
 
