@@ -1,25 +1,26 @@
 ﻿  functions.cpp
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(290,9): warning C4476: 'printf' : unknown type field character '(' in format specifier
 E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(24,7): warning C4101: 'vyber': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(387,6): warning C4101: 'value': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(386,6): warning C4101: 'counter': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(385,7): warning C4101: 'chek_login1': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(436,6): warning C4101: 'counter': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(437,6): warning C4101: 'count_file_scan': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(657,7): warning C4101: 'bod': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(656,7): warning C4101: 'buf': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(687,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(398,6): warning C4101: 'value': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(397,6): warning C4101: 'counter': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(396,7): warning C4101: 'chek_login1': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(448,6): warning C4101: 'counter': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(449,6): warning C4101: 'count_file_scan': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(671,7): warning C4101: 'bod': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(670,7): warning C4101: 'buf': unreferenced local variable
 E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(701,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(702,9): warning C4566: character represented by universal-character-name '\u011B' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(702,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(704,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(705,9): warning C4473: 'printf' : not enough arguments passed for format string
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(705,9): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(705,9): message : the missing variadic argument 2 is required by format string '%10c'
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(678,9): warning C4101: 'k': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(729,7): warning C4101: 'answer': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(786,7): warning C4101: 'question_file': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(781,7): warning C4101: 'word': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(835,7): warning C4101: 'word': unreferenced local variable
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(831): warning C4715: 'navigace_riskuj': not all control paths return a value
-E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(888): warning C4715: 'navigace_body': not all control paths return a value
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(715,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(716,9): warning C4566: character represented by universal-character-name '\u011B' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(716,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(718,9): warning C4566: character represented by universal-character-name '\u00ED' cannot be represented in the current code page (1251)
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(719,9): warning C4473: 'printf' : not enough arguments passed for format string
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(719,9): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(719,9): message : the missing variadic argument 2 is required by format string '%10c'
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(692,9): warning C4101: 'k': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(743,7): warning C4101: 'answer': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(804,7): warning C4101: 'question_file': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(799,7): warning C4101: 'word': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(853,7): warning C4101: 'word': unreferenced local variable
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(849): warning C4715: 'navigace_riskuj': not all control paths return a value
+E:\BPC_IBE_1\PC1T\project_4\project_4\project_4\functions.cpp(906): warning C4715: 'navigace_body': not all control paths return a value
   project_4.vcxproj -> E:\BPC_IBE_1\PC1T\project_4\project_4\x64\Debug\project_4.exe

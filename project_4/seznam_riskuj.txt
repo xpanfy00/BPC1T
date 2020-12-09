@@ -1,4 +1,4 @@
-Jmeno: #Yaroslav# Prijmeni: #Panfyorov# ID: #212273# Result1: #500# Result2: #0# Result3: #0#
+Jmeno: #Yaroslav# Prijmeni: #Panfyorov# ID: #212273# Result1: #700# Result2: #0# Result3: #-300#
 Jmeno: #Alina# Prijmeni: #Antonova# ID: #211596# Result1: #0# Result2: #0# Result3: #0#
 Jmeno: #Denis# Prijmeni: #Jalovecky# ID: #203569# Result1: #0# Result2: #0# Result3: #0#
 Jmeno: #Miroslav# Prijmeni: #Babela# ID: #230530# Result1: #0# Result2: #0# Result3: #0#

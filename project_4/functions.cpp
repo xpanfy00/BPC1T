@@ -62,6 +62,7 @@ void navigace() {
 		break;
 	case 2:
 		printf("napiste vas VutID\n");
+		printf("------> ");
 		scanf("%127s", word);
 		i = file_scan(word);
 		if (i == 1)
@@ -110,6 +111,7 @@ void navigace() {
 
 	case 3:
 		printf("napiste vas VutID\n");
+		printf("------> ");
 		scanf("%127s", word);
 		i = file_scan(word);
 		if (i == 1)
@@ -158,6 +160,7 @@ void navigace() {
 
 	case 4:
 		printf("napiste vas VutID\n");
+		printf("------> ");
 		scanf("%127s", word);
 		i = file_scan(word);
 		if (i == 1)
@@ -212,6 +215,7 @@ void navigace() {
 		break;
 	case 7: 
 		printf("napiste vas VutID");
+		printf("------> ");
 		scanf("%s", word);
 		FILE * questions_file;
 		tema = navigace_riskuj();
@@ -229,7 +233,7 @@ void navigace() {
 		}
 
 		student_riskuj.result = hra_riskuj(a, questions_file);
-
+		printf("dostal jste %d bodu" , student_riskuj.result);
 		
 
 		seznam_riskuj = fopen("seznam_riskuj.txt", "r");
@@ -248,14 +252,14 @@ void navigace() {
 
 				}
 				else if (tema == 2) {
-					i = atoi(student_riskuj.result1);
+					i = atoi(student_riskuj.result2);
 					student_riskuj.result = i + student_riskuj.result;
-					sprintf(student_riskuj.result1, "%d", student_riskuj.result);
+					sprintf(student_riskuj.result2, "%d", student_riskuj.result);
 				}
 				else {
-					i = atoi(student_riskuj.result1);
+					i = atoi(student_riskuj.result3);
 					student_riskuj.result = i + student_riskuj.result;
-					sprintf(student_riskuj.result1, "%d", student_riskuj.result);
+					sprintf(student_riskuj.result3, "%d", student_riskuj.result);
 				}
 				fprintf(riskuj_result, "Jmeno: #%s# Prijmeni: #%s# ID: #%s# Result1:#%s# Result2: #%s# Result3: #%s#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
 			}
@@ -272,18 +276,18 @@ void navigace() {
 		while (!feof(riskuj_result))
 		{
 
-			fscanf(riskuj_result, "Jmeno: #%254[^#]# Prijmeni: #%254[^#]# ID: #%254[^#]# Result1: #%254[^#]# Result2: #%254[^#]# Result3: #%254[^#]#\n\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+			fscanf(riskuj_result, "Jmeno: #%254[^#]# Prijmeni: #%254[^#]# ID: #%254[^#]# Result1: #%254[^#]# Result2: #%254[^#]# Result3: #%254[^#]#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
 			fprintf(seznam_riskuj, "Jmeno: #%s# Prijmeni: #%s# ID: #%s# Result1: #%s# Result2: #%s# Result3: #%s#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
 		}
 		fclose(seznam_riskuj);
 		fclose(riskuj_result);
-
 		break;
 
 	case 8:
 		exit(99);
 		break;
 	}
+	printf("\n\n\n%(ESC)\n");
 	_getch();
 	navigace();
 }
@@ -301,11 +305,12 @@ void navigace_statistika()
 		klavesTady(2, pozice_case_5); printf("  statistiku podle pohlavi\n");
 		klavesTady(3, pozice_case_5); printf("  statistika podle oboru\n");
 		klavesTady(4, pozice_case_5); printf("  osobni statistika \n");
-		klavesTady(5, pozice_case_5); printf("  zpet do menu\n");
+		klavesTady(5, pozice_case_5); printf("  statistika hra riskuj \n");
+		klavesTady(6, pozice_case_5); printf("  zpet do menu\n");
 		zmacknuteTlacitko_case_5 = _getch();
 
 
-		if (zmacknuteTlacitko_case_5 == 80 && pozice_case_5 != 5)
+		if (zmacknuteTlacitko_case_5 == 80 && pozice_case_5 != 6)
 		{
 			pozice_case_5++;
 		}
@@ -362,6 +367,12 @@ void navigace_statistika()
 		_getch();
 		navigace_statistika();
 	}
+	else if (pozice_case_5 == 5)
+	{
+		show_all_users_fiskuj();
+		_getch();
+		navigace_statistika();
+	}
 	else
 	{
 		navigace();
@@ -388,6 +399,7 @@ void StudentInfo() {
 	char word[25];
 	int i = 0;
 	printf("napiste vas VutID");
+	printf("------> ");
 	scanf("%127s", word);
 	i = file_scan(word);
 	if (i == 1)
@@ -449,6 +461,8 @@ int questions(FILE* questions_file_location)
 			i++;
 			while (1)
 			{
+				printf("Odpoved\n ");
+				printf("------> ");
 				scanf("%s", input_answer);
 
 
@@ -757,6 +771,8 @@ int hra_riskuj(const char* body, FILE* questions_file) {
 		}
 	}
 
+	printf("odpoved\n");
+	printf("------> ");
 	scanf("%s", input_answer);
 
 
@@ -773,6 +789,8 @@ int hra_riskuj(const char* body, FILE* questions_file) {
 		a = atoi(body);
 		return -a;
 	}
+	
+
 
 }
 
@@ -884,6 +902,47 @@ int navigace_body()
 	{
 		navigace();
 	}
+
+}
+
+void show_all_users_fiskuj() {
+
+	FILE* seznam_riskuj;
+	int counter;
+	int i = 0;
+	riskuj  student_riskuj, studenti[100];
+	int code = 0;
+	int pocet_uzivatelov = 0;
+	int sum, a, b, c;
+	seznam_riskuj = fopen("seznam_riskuj.txt", "r");
+
+	while (!feof(seznam_riskuj))
+	{
+		counter = fscanf(seznam_riskuj, "Jmeno: #%254[^#]# Prijmeni: #%254[^#]# ID: #%254[^#]# Result1: #%254[^#]# Result2: #%254[^#]# Result3: #%254[^#]#\n", student_riskuj.name, student_riskuj.surname, student_riskuj.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+		if (counter == EOF) {
+			strcpy(student_riskuj.name, "CHYBA"); //ak sa nepodarilo vsetko nacitat, do mena sa ulozi error, aby sme vedeli ze nastala chyba
+		}
+		if (!strcmp(student_riskuj.result1, "0") && !strcmp(student_riskuj.result2, "0") && !strcmp(student_riskuj.result3, "0")) {
+			strcpy(student_riskuj.name, "CHYBA");
+		}
+		if (strcmp(student_riskuj.name, "CHYBA")) {  //ak nenastal error ulozi ho do pola uzivatelov
+			studenti[i] = student_riskuj;
+			i++;
+			pocet_uzivatelov++;
+		}
+		//vrati strukturu hrad
+	}
+	printf("  #  |   Jmeno    |  Prijmeni  |   Riskuj    |   Riskuj     |   Riskuj     |             |\n"
+		   "     |            |            |   Body-IT   | Body-fyzika  | Body-Matika  |   celkem    |\n"
+		   "-----+------------+------------+-------------+--------------+--------------+-------------|\n");
+	for (int i = 0; i < pocet_uzivatelov; i++) {  //vypise nazvy vsetkych nacitanych uzivatelov
+		a = atoi(studenti[i].result1);
+		b = atoi(studenti[i].result2);
+		c = atoi(studenti[i].result3);
+		sum = (a + b + c);
+		printf(" % 3d | %10s | %10s | %11s | %12s | %12s | %11d | \n", i, studenti[i].name, studenti[i].surname, studenti[i].result1, studenti[i].result2, studenti[i].result3, sum);
+	}
+	fclose(seznam_riskuj);
 
 }
 

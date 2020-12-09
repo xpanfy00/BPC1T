@@ -13,6 +13,7 @@ void o_programm();
 int hra_riskuj(const char* body, FILE* questions_file);
 int navigace_riskuj();
 int navigace_body();
+void show_all_users_fiskuj();
 
 
 
@@ -36,8 +37,10 @@ struct riskuj
     char qustion[255];
     char body[255];
     char answer[255];
+    char surname[25];
     char name[25];
     char tema[25];
+    char ID[10];
     int result = 0;
     char result1[25];
     char result2[25];
