@@ -787,7 +787,7 @@ int hra_riskuj(const char* body, FILE* questions_file) {
 
 
 
-	if (!strcmp(question_info.answer, input_answer))
+	if (!strcmp(question_info.answer, input_answer))// vraci body 
 	{
 		system("cls");
 		a = atoi(body);
