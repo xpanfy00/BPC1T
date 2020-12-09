@@ -1,4 +1,4 @@
-Jmeno: #Yaroslav# Prijmeni: #Panfyorov# Obor: #IBE# Pohlavi: #M# Vek: #24# ID: #212273# Test1: #20# Test2: #100# Test3: #60#
+Jmeno: #Yaroslav# Prijmeni: #Panfyorov# Obor: #IBE# Pohlavi: #M# Vek: #24# ID: #212273# Test1: #22# Test2: #100# Test3: #60#
 Jmeno: #Alina# Prijmeni: #Antonova# Obor: #ASP# Pohlavi: #Z# Vek: #21# ID: #211596# Test1: #29# Test2: #12# Test3: #8#
 Jmeno: #Denis# Prijmeni: #Jalovecky# Obor: #IBE# Pohlavi: #M# Vek: #21# ID: #203569# Test1: #34# Test2: #55# Test3: #76#
 Jmeno: #Miroslav# Prijmeni: #Babela# Obor: #IBE# Pohlavi: #M# Vek: #21# ID: #230530# Test1: #45# Test2: #44# Test3: #88#

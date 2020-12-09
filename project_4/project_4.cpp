@@ -13,7 +13,7 @@
 
 int main()
 {
-	navigace();
+	navigace(); //spusti cely programm
 
 	return 0;
 }

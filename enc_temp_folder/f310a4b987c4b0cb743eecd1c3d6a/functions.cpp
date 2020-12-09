@@ -462,13 +462,13 @@ int questions(FILE* questions_file_location) // funkce ktera generuje testy a od
 		printf("Chiba pri otevirani souboru.\n");
 	}
 	t = clock();
-		while (1) //cyklus bude jit pokud nebude prazdny retezec
+		while (1) 
 		{
 			reading_counter = fscanf(questions_file_location, "Q: #%254[^#]# A: #%254[^#]#\n", question, answer);
 			if (reading_counter == EOF)
 				break;
 			printf("%s\n", question);
-			i++; // mame tady i aby pocitat kolik mame otazek a pocitat procent
+			i++;
 			while (1)
 			{
 				printf("Odpoved\n ");
@@ -556,10 +556,10 @@ void show_all_users_podle_pohlavi(const char* word) {
 		if (counter == EOF) {
 			strcpy(student.name, "CHYBA"); //ak sa nepodarilo vsetko nacitat, do mena sa ulozi error, aby sme vedeli ze nastala chyba
 		}
-		if (!strcmp(student.test1, "0") && !strcmp(student.test2, "0") && !strcmp(student.test3, "0")) { // kdyz ma ve vsech testu vysledky 0 tak do mena se ulozi chiba 
+		if (!strcmp(student.test1, "0") && !strcmp(student.test2, "0") && !strcmp(student.test3, "0")) {
 			strcpy(student.name, "CHYBA");
 		}
-		if (strcmp(student.sex, word) || strcmp(student.sex, word)) // kontrola aby vypisoval jen uzevatelu s stejnym pohlavi 
+		if (strcmp(student.sex, word) || strcmp(student.sex, word))
 		{
 			strcpy(student.name, "CHYBA");
 		}
@@ -601,7 +601,7 @@ void show_all_users_podle_oboru(const char* word) {
 		if (counter == EOF) {
 			strcpy(student.name, "CHYBA"); //ak sa nepodarilo vsetko nacitat, do mena sa ulozi error, aby sme vedeli ze nastala chyba
 		}
-		if (!strcmp(student.test1, "0") && !strcmp(student.test2, "0") && !strcmp(student.test3, "0")) { // kdyz ma ve vsech testu vysledky 0 tak do mena se ulozi chiba 
+		if (!strcmp(student.test1, "0") && !strcmp(student.test2, "0") && !strcmp(student.test3, "0")) {
 			strcpy(student.name, "CHYBA");
 		}
 		if (strcmp(student.faculty, word))
@@ -646,7 +646,7 @@ void show_osobni(const char* word)
 		if (counter == EOF) {
 			strcpy(student.name, "CHYBA"); //ak sa nepodarilo vsetko nacitat, do mena sa ulozi error, aby sme vedeli ze nastala chyba
 		}
-		if (!strcmp(student.test1, "0") && !strcmp(student.test2, "0") && !strcmp(student.test3, "0")) { // kdyz ma ve vsech testu vysledky 0 tak do mena se ulozi chiba 
+		if (!strcmp(student.test1, "0") && !strcmp(student.test2, "0") && !strcmp(student.test3, "0")) {
 			strcpy(student.name, "CHYBA");
 		}
 		if (strcmp(student.ID, word))
@@ -674,7 +674,7 @@ void show_osobni(const char* word)
 	fclose(seznam);
 }
 
-int file_scan(const char* word) // kontrola existuje takovy student nebo ne
+int file_scan(const char* word)
 {
 	FILE* seznam;
 	char buf[512];
