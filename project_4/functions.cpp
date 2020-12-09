@@ -16,12 +16,16 @@ void navigace() {
 	int pozice = 1;
 	int zmacknuteTlacitko = 0;
 	int pozice_case_5 = 0;
-	FILE* questions_file_location,* seznam,* question_file_result;
+	FILE* questions_file_location,* seznam,* question_file_result,* seznam_riskuj,* riskuj_result;
 	Info studenti[100], student;
 	int i = 0;
 	int test_info;
 	char word[128];
 	char vyber[25];
+	int body;
+	int tema;
+	char a[255];
+	riskuj student_riskuj;
 	
 
 	while (zmacknuteTlacitko != 13) {
@@ -33,13 +37,14 @@ void navigace() {
 		klavesTady(4, pozice); printf("  Test - 3\n");
 		klavesTady(5, pozice); printf("  Statistika\n");
 		klavesTady(6, pozice); printf("  O programe\n");
-		klavesTady(7, pozice); printf("  EXIT\n");
+		klavesTady(7, pozice); printf("  riskuj\n");
+		klavesTady(8, pozice); printf("  EXIT\n");
 
 
 		zmacknuteTlacitko = _getch();
 
 
-		if (zmacknuteTlacitko == 80 && pozice != 7) {
+		if (zmacknuteTlacitko == 80 && pozice != 8) {
 			pozice++;
 		}
 		else if (zmacknuteTlacitko == 72 && pozice != 1) {
@@ -205,7 +210,77 @@ void navigace() {
 	case 6:
 		o_programm();
 		break;
-	case 7:
+	case 7: 
+		printf("napiste vas VutID");
+		scanf("%s", word);
+		FILE * questions_file;
+		tema = navigace_riskuj();
+		body = navigace_body();
+
+		sprintf(a, "%d", body);
+		if (tema == 1) {
+			questions_file = fopen("Questions_IT.txt", "r");
+		}
+		else if (tema == 2) {
+			questions_file = fopen("Questions_fyzika.txt", "r");
+		}
+		else {
+			questions_file = fopen("Questions_matika.txt", "r");
+		}
+
+		student_riskuj.result = hra_riskuj(a, questions_file);
+
+		
+
+		seznam_riskuj = fopen("seznam_riskuj.txt", "r");
+		riskuj_result = fopen("riskuj_result.txt", "w");
+
+		while (!feof(seznam_riskuj))
+		{
+			fscanf(seznam_riskuj, "Jmeno: #%254[^#]# Prijmeni: #%254[^#]# ID: #%254[^#]# Result1: #%254[^#]# Result2: #%254[^#]# Result3: #%254[^#]#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+
+			if (!strcmp(student.ID, word))
+			{
+				if (tema == 1) {
+					i = atoi(student_riskuj.result1);
+					student_riskuj.result = i + student_riskuj.result;
+					sprintf(student_riskuj.result1, "%d", student_riskuj.result);
+
+				}
+				else if (tema == 2) {
+					i = atoi(student_riskuj.result1);
+					student_riskuj.result = i + student_riskuj.result;
+					sprintf(student_riskuj.result1, "%d", student_riskuj.result);
+				}
+				else {
+					i = atoi(student_riskuj.result1);
+					student_riskuj.result = i + student_riskuj.result;
+					sprintf(student_riskuj.result1, "%d", student_riskuj.result);
+				}
+				fprintf(riskuj_result, "Jmeno: #%s# Prijmeni: #%s# ID: #%s# Result1:#%s# Result2: #%s# Result3: #%s#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+			}
+			else
+			{
+				fprintf(riskuj_result, "Jmeno: #%s# Prijmeni: #%s# ID: #%s# Result1:#%s# Result2: #%s# Result3: #%s#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+			}
+		}
+		fclose(seznam_riskuj);
+		fclose(riskuj_result);
+
+		riskuj_result = fopen("riskuj_result.txt", "r");
+		seznam_riskuj = fopen("seznam_riskuj.txt", "w");
+		while (!feof(riskuj_result))
+		{
+
+			fscanf(riskuj_result, "Jmeno: #%254[^#]# Prijmeni: #%254[^#]# ID: #%254[^#]# Result1: #%254[^#]# Result2: #%254[^#]# Result3: #%254[^#]#\n\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+			fprintf(seznam_riskuj, "Jmeno: #%s# Prijmeni: #%s# ID: #%s# Result1: #%s# Result2: #%s# Result3: #%s#\n", student.name, student.surname, student.ID, student_riskuj.result1, student_riskuj.result2, student_riskuj.result3);
+		}
+		fclose(seznam_riskuj);
+		fclose(riskuj_result);
+
+		break;
+
+	case 8:
 		exit(99);
 		break;
 	}
@@ -645,6 +720,170 @@ void o_programm()
 
 
 
+
+}
+
+int hra_riskuj(const char* body, FILE* questions_file) {
+
+	
+	char answer[255];
+	char input_answer[255];
+	int counter;
+	int i = 0;
+	riskuj question_info, questions[100]; //struktura kde sa ulozia data o uzivatelovi
+	int code = 0;
+	int pocet_otazek = 0;
+	int a ;
+	
+
+
+
+	while (!feof(questions_file))
+	{
+		counter = fscanf(questions_file, "Q: #%254[^#]# Pocet_bodev: #%254[^#]#  A: #%254[^#]#\n",  question_info.qustion, question_info.body, question_info.answer);
+		if (counter == EOF) {
+			strcpy(question_info.body, "CHYBA"); 
+		}
+		if (strcmp(question_info.body, "CHYBA")) { 
+			questions[i] = question_info;
+			i++;
+			pocet_otazek++;
+		}
+	}
+	for (int i = 0; i < pocet_otazek; i++) {
+		if (!strcmp(questions[i].body, body))
+		{
+			printf("%s", questions[i].qustion);
+		}
+	}
+
+	scanf("%s", input_answer);
+
+
+
+	if (!strcmp(question_info.answer, input_answer))
+	{
+		system("cls");
+		a = atoi(body);
+		return a;
+	}
+
+	{
+		system("cls");
+		a = atoi(body);
+		return -a;
+	}
+
+}
+
+int navigace_riskuj()
+{
+	char word[255];
+	system("cls");
+	int pozice_case_5 = 1;
+	int zmacknuteTlacitko_case_5 = 0;
+	int body = 0;
+	char question_file;
+	
+	while (zmacknuteTlacitko_case_5 != 13)
+	{
+		system("cls");
+		klavesTady(1, pozice_case_5); printf("  IT\n");
+		klavesTady(2, pozice_case_5); printf("  fyzika\n");
+		klavesTady(3, pozice_case_5); printf("  matika\n");
+		klavesTady(4, pozice_case_5); printf("  <-----\n");
+		zmacknuteTlacitko_case_5 = _getch();
+
+
+		if (zmacknuteTlacitko_case_5 == 80 && pozice_case_5 != 4)
+		{
+			pozice_case_5++;
+		}
+		else if (zmacknuteTlacitko_case_5 == 72 && pozice_case_5 != 1)
+		{
+			pozice_case_5--;
+		}
+		else
+		{
+			pozice_case_5 = pozice_case_5;
+		}
+	}
+	if (pozice_case_5 == 1)
+	{
+		
+		return 1;
+	}
+	else if (pozice_case_5 == 2)
+	{
+	
+		return 2;
+	}
+	else if (pozice_case_5 == 3)
+	{
+		
+		return 3;
+	}
+	else if (pozice_case_5 == 4)
+	{
+		navigace();
+	}
+	
+}
+
+int navigace_body()
+{
+	char word[255];
+	system("cls");
+	int pozice_case_5 = 1;
+	int zmacknuteTlacitko_case_5 = 0;
+	while (zmacknuteTlacitko_case_5 != 13)
+	{
+		system("cls");
+		klavesTady(1, pozice_case_5); printf("  100\n");
+		klavesTady(2, pozice_case_5); printf("  200\n");
+		klavesTady(3, pozice_case_5); printf("  300\n");
+		klavesTady(4, pozice_case_5); printf("  500\n");
+		klavesTady(5, pozice_case_5); printf("  <-----\n");
+		zmacknuteTlacitko_case_5 = _getch();
+
+
+		if (zmacknuteTlacitko_case_5 == 80 && pozice_case_5 != 5)
+		{
+			pozice_case_5++;
+		}
+		else if (zmacknuteTlacitko_case_5 == 72 && pozice_case_5 != 1)
+		{
+			pozice_case_5--;
+		}
+		else
+		{
+			pozice_case_5 = pozice_case_5;
+		}
+	}
+	if (pozice_case_5 == 1)
+	{
+		//100
+		return 100;
+	}
+	else if (pozice_case_5 == 2)
+	{
+		//200
+		return 200;
+	}
+	else if (pozice_case_5 == 3)
+	{
+		//300
+		return 300;
+	}
+	else if (pozice_case_5 == 4)
+	{
+		//500
+		return 500;
+	}
+	else
+	{
+		navigace();
+	}
 
 }
 

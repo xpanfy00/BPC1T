@@ -1,0 +1,48 @@
+Q: #Aka hodnota bude v premennej x?
+VSTUP: 8.32821E5
+
+	double x = 14886;
+	scanf( "lf", &x );
+
+A) 8
+B) Nedefinovana, program moze spadnut.
+C) 14886
+D) 832821
+E) 8.32821
+#
+Pocet_bodev: #100# A: #D#
+Q: #Aku hodnotu musi mat premenna x, 
+ aby bola podmienka splnena.
+	
+	int x = ...;
+	if( x == 28 & 10 )
+	{
+		...
+	}
+ 
+ 
+A) Podmienku nie je mozne splnit.
+B) 1
+C) 8
+D) 28
+E) Plati pre lubovolne x.
+#
+Pocet_bodev: #200# A: #A#
+Q: #Aku vlnovu dlzku ma modra farba?
+
+A)380nm-430nm
+B)430nm-520nm
+C)320nm-420nm
+D)1m-1km
+E)380nm-530nm
+#
+Pocet_bodev: #300# A: #A#
+Q: #Aku hodnotu ma Avogadrova konstanta?
+
+A) 1,602*10E19 C
+B) 6,023*10E25 mol^-1
+C) 6,626*10E-34 Js
+D) 2,998*10E8 ms^-1
+#
+Pocet_bodev: #500#
+A: #B#

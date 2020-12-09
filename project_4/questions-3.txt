@@ -1,3 +1,4 @@
+B: 100
 Q: #Aka hodnota bude  premennej x?
 VSTUP: 6.59404e5
 	int x = -6075;
@@ -9,6 +10,7 @@ C) 659404
 D) 6.59404
 E) Nedefinovana, program moze spadnut.
 # A: #A#
+B: 200
 Q: #Co zobrazi nasledujici program?
 
 	int x = -209;
@@ -23,6 +25,7 @@ C) Program spadne.
 D) Program nepojde skompilovat.
 E) Nic.
 # A: #B#
+B: 300
 Q: #Aka hodnota bude v premennej x?
 
 	int x;
@@ -34,6 +37,7 @@ C) Program nepojde skompilovat.
 D) 6908.684
 E) -6908.684
 # A: #A#
+B: 500
 Q: #Aku hodnotu bude mat premenna x?
 	int x;
 	x = 16.0E-0 / 32.0;
@@ -44,59 +48,3 @@ C) Program nepojde skompilovat.
 D) 6908.684
 E) -6908.684 
 # A: #A#
-Q: #Preved dvojkove cislo 10100101 o desiatkovej sustavy.
-
-A) 165
-B) 162
-C) 112
-D) 305
-E)  Nie je mozne.
-# A: #A#
-Q: #Doslo v teto casti kodu k chybe?
-
-	char * a;
-	strcpy(a, "Hello, World");
-A) ano
-B) ne
-C) odpoved zavisi na kompilatoru
-# A: #C#
-Q: #Jak vypada osmibitová maska ​​v sestnactkove soustave s bity nastavenymi v lichych pozicich.
-
-A) 0xAA
-B) 0xFF
-C) 0x77
-D) 0x33
-E) 0x55
-# A: #A#
-Q: #Jaky typ ukazatele muze ukazovat na jakykoli datovy typ?
-
-A) void *ptr;
-B) void ptr;
-C) const void ptr;
-D) zadny takovy ukazatel neexistuje
-E) void (*ptr)();
-# A: #A#
-Q: #Jak spravne přistupovat k prvku promenne st:
-
-	struct Structure {
-		int a;
-	} st;
-
-A) Structure.a
-B) st.a
-C) st -> a
-D) Structure.st.a
-E) st.getA();
-# A: #B#
-Q: #Jaka bude hodnota prvku THIRD vycet:
-
-	enum digits{
-		FIRST = 0, SECOND = 0, THIRD
-	};
-
-A) 0
-B) 1
-C) 2
-D) 3
-E) hodnota nena definovana
-# A: #B#
